@@ -1,0 +1,58 @@
+<html lang="ko">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, width=device-width">
+    <link rel="stylesheet" href="Title.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+    <title>TitleBoard</title>
+    <script defer src="./Title.js"></script>
+</head>
+<body>
+  <input type="checkbox" id="menuicon">
+  <label for="menuicon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </label>
+  <div class="sidebar">
+    <ul class="sitemap-ul">
+        <li><a href="/Home.html">Home</a></li>
+        <li><a href="/Board/Title.html">Board</a></li>
+        <li><a href="/Task/DnD.html">Task</a></li>
+        <li><a href="/Issue/issue.html">Issue</a></li>
+    </ul>
+  </div>
+  <h1>Storyboard</h1>
+
+  <!-- 페이지 바깥부분에 드래그하면 삭제됨 -->
+  <div class="app" id="DeleteBoard" ondrop="drop(event)" ondragover="allowDrop(event)">
+    <div class="tab_content">
+        <div class="conbox con1">
+            <div class="tbl-header">
+                <table cellpadding="0" cellspacing="0">
+                    <thead>
+                    <tr>
+                        <th class="text-center">Function</th>
+                        <th class="text-center">Description</th>
+                        <th class="text-center">Score</th>
+                        <th class="text-center">Importance</th>
+                    </tr>
+                    </thead>
+                </table>
+            </div>
+            <div style="width:100%; height:400px; overflow:auto; ">
+                <table class="table-fill">
+                    <tbody class="table-hover" id="storyboard_add">
+                    <!-- 추가되는 부분 -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="add">
+          <button type="button" onclick="window.open('BoardRegister.html','_self')">+</button>
+        </div>
+    </div>
+  </div>
+</body>
